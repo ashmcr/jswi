@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Platforms </title>
+    <description>Platforms  Feed</description>
+    <link></link>
+    <pubDate>Tue, 09 Jan 2024 06:35:22 GMT</pubDate>
+    <atom:link href="/platforms/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title>Paypal</title>
+            
+            <link>/platforms/paypal/</link>
+            <pubDate>Tue, 09 Jan 2024 06:35:22 GMT</pubDate>
+            <guid>/platforms/paypal/</guid>
+            
+            <content type="html"></content>
+            
+        </item>
+        <item>
+            <title>Onlyfans</title>
+            
+            <link>/platforms/onlyfans/</link>
+            <pubDate>Tue, 09 Jan 2024 06:35:22 GMT</pubDate>
+            <guid>/platforms/onlyfans/</guid>
+            
+            <content type="html"></content>
+            
+        </item>
+        <item>
+            <title>Just for Fans</title>
+            
+            <link>/platforms/just-for-fans/</link>
+            <pubDate>Tue, 09 Jan 2024 06:35:22 GMT</pubDate>
+            <guid>/platforms/just-for-fans/</guid>
+            
+            <content type="html"></content>
+            
+        </item>
+        <item>
+            <title>Cash App</title>
+            
+            <link>/platforms/cash-app/</link>
+            <pubDate>Tue, 09 Jan 2024 06:35:22 GMT</pubDate>
+            <guid>/platforms/cash-app/</guid>
+            
+            <content type="html"></content>
+            
+        </item>
+  </channel>
+</rss>
