@@ -16,7 +16,7 @@
     "preserve": "npm run optimize",
     "prebuild": "npm run optimize",
     "serve": "npx @11ty/eleventy --serve",
-    "build": "eleventy",
+    "build": "npx @11ty/eleventy",
     "local-backend": "npx netlify-cms-proxy-server"
   },
   "devDependencies": {
