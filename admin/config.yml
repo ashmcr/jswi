@@ -87,9 +87,93 @@ collections:
             name: additional_tags
             widget: text
             required: false
-  - name: site
-    label: Sites
-    folder: cms/site
+  - name: '401'
+    label: '401'
+    folder: cms/401
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: '401'
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[401].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - name: '404'
+    label: '404'
+    folder: cms/404
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: '404'
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[404].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - name: profile
+    label: Profile
+    folder: cms/profile
     create: true
     identifier_field: name
     extension: md
@@ -147,14 +231,27 @@ collections:
         label: Model Consent Form
         widget: string
         required: false
+      - hint: ''
+        name: f_links
+        label: Links
+        widget: relation
+        required: false
+        collection: platforms
+        value_field: cms/platforms/{{slug}}.md
+        search_fields:
+          - slug
+          - name
+        display_fields:
+          - title
+        multiple: true
       - label: Tags
         widget: hidden
         name: tags
-        default: site
+        default: profile
       - label: Layout
         widget: hidden
         name: layout
-        default: '[site].html'
+        default: '[profile].html'
       - label: Publish Date
         name: date
         widget: datetime
@@ -303,10 +400,6 @@ collections:
             name: title
             widget: hidden
             default: Texts
-          - hint: 'Original text: No items found., key: 3d503d2b'
-            label: Text
-            name: 3d503d2b
-            widget: string
           - hint: 'Original text: Protected Page, key: -11d4bbff'
             label: Text
             name: '-11d4bbff'
@@ -1518,6 +1611,10 @@ collections:
             label: Text
             name: 34e4c66
             widget: string
+          - hint: 'Original text: No items found., key: 3d503d2b'
+            label: Text
+            name: 3d503d2b
+            widget: string
       - label: Links
         name: links
         file: cms/_data/links.json
@@ -1526,10 +1623,6 @@ collections:
             name: title
             widget: hidden
             default: Links
-          - hint: 'Original link: #, key: 23'
-            label: Link
-            name: '23'
-            widget: string
           - hint: 'Original link: /, key: 2f'
             label: Link
             name: 2f
@@ -1539,6 +1632,10 @@ collections:
               key: 49f972a8
             label: Link
             name: 49f972a8
+            widget: string
+          - hint: 'Original link: #, key: 23'
+            label: Link
+            name: '23'
             widget: string
           - hint: 'Original link: https://relume.io, key: -48962a2f'
             label: Link
@@ -1559,7 +1656,7 @@ collections:
             widget: hidden
             default: Images
           - label: Image
-            name: '-382394cf'
+            name: '-7a700be7'
             widget: object
             fields:
               - name: url
@@ -1572,7 +1669,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: 4abef31c
+            name: '-6087357f'
             widget: object
             fields:
               - name: url
@@ -1585,20 +1682,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-2b1beb3c'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: 722c2283
+            name: '-12f96acd'
             widget: object
             fields:
               - name: url
@@ -1624,7 +1708,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-135f85cd'
+            name: 71b09ce3
             widget: object
             fields:
               - name: url
@@ -1637,7 +1721,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: 6190b479
+            name: '-195f28d7'
             widget: object
             fields:
               - name: url
@@ -1649,3 +1733,17 @@ collections:
                 label: Image Alt
                 widget: string
                 required: false
+          - label: Image
+            name: '-382394cf'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+local_backend: true
